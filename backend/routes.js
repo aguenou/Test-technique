@@ -1,8 +1,11 @@
-const express = require("express")
+import express from 'express'
+import { hasToken } from './middleware.js'
+import {loginUser, registerUser, listUsers} from "./controller.js"
+
 const router = express.Router()
-const {getUser, setUser} = require("./controller")
 
-router.get('/',getUser)
+router.post('/login',loginUser)
+router.post('/register',registerUser)
+router.get('/users',hasToken, listUsers) 
 
-router.post('/',setUser)
-module.exports=router
+export default router
