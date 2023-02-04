@@ -1,3 +1,3 @@
-#\textbf{Installer les dépendances} : npm i
+**Installer les dépendances**: npm i
 
-#\textbf{Lancer le serveur} : npm run server
+**Lancer le serveur** : npm run server
